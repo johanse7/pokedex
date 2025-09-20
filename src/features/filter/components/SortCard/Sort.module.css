@@ -5,6 +5,7 @@
   padding: var(--spacing-xs);
   z-index: var(--z-index-modal);
   box-shadow: var(--shadow-md);
+  min-width: 120px;
 }
 
 .header {
@@ -17,5 +18,5 @@
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
 }
