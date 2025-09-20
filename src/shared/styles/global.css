@@ -60,11 +60,6 @@ table {
    globals
   -------------------- */
 
-.container {
-  width: 100%;
-  max-width: 56rem;
-  margin: 0 auto;
-}
 
 .capitalize {
   text-transform: capitalize;

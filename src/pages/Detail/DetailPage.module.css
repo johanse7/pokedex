@@ -1,20 +1,16 @@
 .containerDetail {
-  min-height: 100dvh;
   background-image: url("/images/pokeball.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top var(--spacing-xs) right var(--spacing-xs);
   background-size: auto;
-  display: flex;
-  flex-direction: column;
-  padding: var(--spacing-xs);
 }
 
-.wrapper {
+.wrapperDetail {
+  padding: 0 var(--spacing-xs) var(--spacing-xs);
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: calc(100dvh - var(--spacing-sm));
+  flex: 1;
 }
 
 .detailInfo {
@@ -26,8 +22,6 @@
   padding-bottom: 20px;
   padding-left: var(--spacing-lg);
   padding-right: var(--spacing-lg);
-  display: flex;
-  flex-direction: column;
   gap: var(--spacing-xl);
   flex: 1;
 }

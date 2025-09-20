@@ -7,3 +7,10 @@
 .mainContent {
   flex: 1;
 }
+
+.centeredContainer {
+  composes: layout;
+  width: 100%;
+  max-width: 56rem;
+  margin: 0 auto;
+}
