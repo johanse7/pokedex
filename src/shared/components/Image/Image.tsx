@@ -1,21 +1,47 @@
-import { useState } from "react";
-
 import silhouette from "@/assets/images/Silhouette.png";
+import { useState } from "react";
+import styles from "./Image.module.css";
 
-type ImageWithFallbackProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+type ImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   placeholder?: string;
 };
 
 export const Image = ({
   src,
   placeholder = silhouette,
+  alt,
+  className,
   ...rest
-}: ImageWithFallbackProps) => {
-  const [imgSrc, setImgSrc] = useState(src ?? placeholder);
+}: ImageProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  const handleError = () => {
-    setImgSrc(placeholder);
-  };
+  const handleLoad = () => setIsLoaded(true);
+  const handleError = () => setHasError(true);
 
-  return <img {...rest} src={imgSrc} onError={handleError} />;
+  return (
+    <div className={styles.wrapper}>
+      {!isLoaded && (
+        <img
+          src={placeholder}
+          alt={`${alt ?? "placeholder"}-loading`}
+          className={styles.placeholder}
+          {...rest}
+        />
+      )}
+
+      {!hasError && (
+        <img
+          src={src}
+          alt={alt}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`${styles.image} ${isLoaded ? styles.loaded : ""} ${
+            className ?? ""
+          }`}
+          {...rest}
+        />
+      )}
+    </div>
+  );
 };
