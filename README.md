@@ -96,4 +96,4 @@ VITE_POKEMON_LIMIT=20
 
 ## Live Demo 🌐
 
-You can view the live demo at: [Live Demo 🌐](https://tekton-challenge.vercel.app/auth)
+You can view the live demo at: [Live Demo 🌐](https://pokedex-one-theta-55.vercel.app/)
