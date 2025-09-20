@@ -16,6 +16,6 @@
 
 @media (min-width: 768px) {
   .headerContainer {
-    padding: var(--spacing-lg) var(--spacing-4xl);
+    padding:  var(--spacing-xl);
   }
 }

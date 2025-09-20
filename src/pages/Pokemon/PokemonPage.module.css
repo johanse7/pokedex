@@ -1,10 +1,19 @@
 .containerPokemonPage {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
+  background: var(--color-primary);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
 .listContainer {
   padding: var(--spacing-xs);
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }

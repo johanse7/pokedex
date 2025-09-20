@@ -37,8 +37,8 @@ export const DetailPage = () => {
 
   return (
     <div className={`${styles.containerDetail} ${getTypeClass(firstType)}`}>
-      <HeaderDetails pokemonId={pokemonId} title={name} />
-      <div className="container">
+      <div className={`${styles.wrapper} container`}>
+        <HeaderDetails pokemonId={pokemonId} title={name} />
         <section className={styles.detailInfo}>
           <div className={styles.sliderPokemonContent}>
             <Slider images={images} className={styles.sliderPokemon} />

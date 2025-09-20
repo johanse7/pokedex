@@ -12,24 +12,24 @@ import stylesFavoritesPage from "./FavoritePage.module.css";
 export const FavoritesPage = () => {
   const favoritePokemons = useAppSelector(selectFavorites);
 
-  if (!favoritePokemons.length) {
-    return <EmptyState />;
-  }
-
   return (
     <div className={`${styles.containerPokemonPage}`}>
       <div className="container">
-        <section className={styles.listContainer}>
-          <header className={stylesFavoritesPage.header}>
-            <Link to="/">
-              <ArrowBackIcon width={36} height={36} />
-            </Link>
-            <Typography variant="headlineBold">Favorite Pokemos</Typography>
-          </header>
-          <div className={stylePokemonList.content}>
-            <PokemonGrid pokemonList={favoritePokemons} />
-          </div>
-        </section>
+        <header className={stylesFavoritesPage.header}>
+          <Link to="/">
+            <ArrowBackIcon width={36} height={36} />
+          </Link>
+          <Typography variant="headlineBold">Favorite Pokemos</Typography>
+        </header>
+        {!favoritePokemons.length ? (
+          <EmptyState className={stylesFavoritesPage.emptyState} />
+        ) : (
+          <section className={styles.listContainer}>
+            <div className={stylePokemonList.content}>
+              <PokemonGrid pokemonList={favoritePokemons} />
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );

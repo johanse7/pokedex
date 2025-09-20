@@ -10,12 +10,12 @@ type PaginationProps = {
 };
 
 const MAX_VISIBLE_PAGE = 5;
+
 export const Pagination: React.FC<PaginationProps> = ({
   totalPages,
   className = "",
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
-
   const currentPage = Number(searchParams.get("page") || 1);
 
   const goToPage = (page: number) => {
@@ -34,14 +34,13 @@ export const Pagination: React.FC<PaginationProps> = ({
 
   const renderPageNumbers = () => {
     const pages = [];
-    const maxVisible = MAX_VISIBLE_PAGE;
     let startPage = Math.max(1, currentPage - 2);
     let endPage = Math.min(totalPages, currentPage + 2);
 
     if (currentPage <= 3) {
-      endPage = Math.min(totalPages, maxVisible);
+      endPage = Math.min(totalPages, MAX_VISIBLE_PAGE);
     } else if (currentPage >= totalPages - 2) {
-      startPage = Math.max(1, totalPages - (maxVisible - 1));
+      startPage = Math.max(1, totalPages - (MAX_VISIBLE_PAGE - 1));
     }
 
     if (startPage > 1) {
@@ -89,12 +88,12 @@ export const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div className={`${styles.pagination} ${className}`}>
+    <div className={`${styles.paginationWrapper} ${className}`}>
       <button onClick={prevPage} disabled={currentPage === 1}>
         <ChevronLeftIcon width={32} height={32} />
       </button>
 
-      {renderPageNumbers()}
+      <div className={styles.pageNumbers}>{renderPageNumbers()}</div>
 
       <button onClick={nextPage} disabled={currentPage === totalPages}>
         <ChevronRightIcon width={32} height={32} />

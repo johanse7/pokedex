@@ -5,7 +5,7 @@ import style from "./PokemonPage.module.css";
 export const PokemonPage = () => {
   return (
     <div className={`${style.containerPokemonPage}`}>
-      <div className="container">
+      <div className={`${style.wrapper} container`}>
         <FilterContainer />
         <section className={style.listContainer}>
           <PokemonListContainer />
