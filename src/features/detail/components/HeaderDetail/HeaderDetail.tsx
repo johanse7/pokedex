@@ -1,6 +1,6 @@
 import ArrowBackIcon from "@/assets/icons/arrow_back.svg?react";
-import { Typography } from "@/shared/ui";
-import { Link } from "react-router";
+import { Button, Typography } from "@/shared/ui";
+import { useNavigate } from "react-router";
 import styles from "./HeaderDetail.module.css";
 
 type HeaderDetailsProps = {
@@ -10,13 +10,18 @@ type HeaderDetailsProps = {
 
 export const HeaderDetails = (props: HeaderDetailsProps) => {
   const { title, pokemonId } = props;
+  const navigate = useNavigate();
+
+  const handleClickBack = () => {
+    navigate(-1);
+  };
 
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerAction}>
-        <Link to="/">
+        <Button variant="outline" onClick={handleClickBack}>
           <ArrowBackIcon width={32} height={32} />
-        </Link>
+        </Button>
         <Typography tag="h1" variant="headlineBold" className="capitalize">
           {title}
         </Typography>
