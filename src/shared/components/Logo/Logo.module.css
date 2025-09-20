@@ -1,0 +1,18 @@
+.contentLogo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,21 @@
+.wrapper {
+  position: relative;
+}
+
+.contentSortCard {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.iconSort {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .iconSort {
+    width: 24px;
+    height: 24px;
+  }
+}

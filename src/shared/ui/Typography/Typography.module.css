@@ -1,0 +1,59 @@
+/* Header */
+.headlineBold {
+  font-family: var(--font-family);
+  font-size: var(--font-headline-bold-size);
+  line-height: var(--font-headline-bold-line-height);
+  font-weight: var(--font-headline-bold-weight);
+}
+
+.subtitle1Bold {
+  font-family: var(--font-family);
+  font-size: var(--font-subtitle1-bold-size);
+  line-height: var(--font-subtitle1-bold-line-height);
+  font-weight: var(--font-subtitle1-bold-weight);
+}
+
+.subtitle2Bold {
+  font-family: var(--font-family);
+  font-size: var(--font-subtitle2-bold-size);
+  line-height: var(--font-subtitle2-bold-line-height);
+  font-weight: var(--font-subtitle2-bold-weight);
+}
+
+.subtitle3Bold {
+  font-family: var(--font-family);
+  font-size: var(--font-subtitle3-bold-size);
+  line-height: var(--font-subtitle3-bold-line-height);
+  font-weight: var(--font-subtitle3-bold-weight);
+}
+
+/* Body */
+.body1Regular {
+  font-family: var(--font-family);
+  font-size: var(--font-body1-regular-size);
+  line-height: var(--font-body1-regular-line-height);
+  font-weight: var(--font-body1-regular-weight);
+}
+
+.body2Regular {
+  font-family: var(--font-family);
+  font-size: var(--font-body2-regular-size);
+  line-height: var(--font-body2-regular-line-height);
+  font-weight: var(--font-body2-regular-weight);
+}
+
+.body3Regular {
+  font-family: var(--font-family);
+  font-size: var(--font-body3-regular-size);
+  line-height: var(--font-body3-regular-line-height);
+  font-weight: var(--font-body3-regular-weight);
+ 
+}
+
+.captionRegular {
+  font-family: var(--font-family);
+  font-size: var(--font-caption-regular-size);
+  line-height: var(--font-caption-regular-line-height);
+  font-weight: var(--font-caption-regular-weight);
+  color: var(--color-medium);
+}

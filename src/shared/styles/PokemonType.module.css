@@ -1,0 +1,111 @@
+.typeBug {
+  background-color: var(--color-type-bug);
+}
+.typeDark {
+  background-color: var(--color-type-dark);
+}
+.typeDragon {
+  background-color: var(--color-type-dragon);
+}
+.typeElectric {
+  background-color: var(--color-type-electric);
+}
+.typeFairy {
+  background-color: var(--color-type-fairy);
+}
+.typeFighting {
+  background-color: var(--color-type-fighting);
+}
+.typeFire {
+  background-color: var(--color-type-fire);
+}
+.typeFlying {
+  background-color: var(--color-type-flying);
+}
+.typeGhost {
+  background-color: var(--color-type-ghost);
+}
+.typeNormal {
+  background-color: var(--color-type-normal);
+}
+.typeGrass {
+  background-color: var(--color-type-grass);
+}
+.typeGround {
+  background-color: var(--color-type-ground);
+}
+.typeIce {
+  background-color: var(--color-type-ice);
+}
+.typePoison {
+  background-color: var(--color-type-poison);
+}
+.typePsychic {
+  background-color: var(--color-type-psychic);
+}
+.typeRock {
+  background-color: var(--color-type-rock);
+}
+.typeSteel {
+  background-color: var(--color-type-steel);
+}
+.typeWater {
+  background-color: var(--color-type-water);
+}
+
+/* Text */
+
+.textBug {
+  color: var(--color-type-bug);
+}
+.textDark {
+  color: var(--color-type-dark);
+}
+.textDragon {
+  color: var(--color-type-dragon);
+}
+.textElectric {
+  color: var(--color-type-electric);
+}
+.textFairy {
+  color: var(--color-type-fairy);
+}
+.textFighting {
+  color: var(--color-type-fighting);
+}
+.textFire {
+  color: var(--color-type-fire);
+}
+.textFlying {
+  color: var(--color-type-flying);
+}
+.textGhost {
+  color: var(--color-type-ghost);
+}
+.textNormal {
+  color: var(--color-type-normal);
+}
+.textGrass {
+  color: var(--color-type-grass);
+}
+.textGround {
+  color: var(--color-type-ground);
+}
+.textIce {
+  color: var(--color-type-ice);
+}
+.textPoison {
+  color: var(--color-type-poison);
+}
+.textPsychic {
+  color: var(--color-type-psychic);
+}
+.textRock {
+  color: var(--color-type-rock);
+}
+.textSteel {
+  color: var(--color-type-steel);
+}
+.textWater {
+  color: var(--color-type-water);
+}

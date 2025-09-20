@@ -1,0 +1,21 @@
+.headerContainer {
+  padding: var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+}
+.headerAction {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+.headerAction button {
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .headerContainer {
+    padding: var(--spacing-lg) var(--spacing-4xl);
+  }
+}

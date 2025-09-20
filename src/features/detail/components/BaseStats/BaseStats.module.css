@@ -1,0 +1,27 @@
+.baseStatsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.tableStats {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nameCell {
+  border-right: 1px solid var(--color-light);
+  padding-right: var(--spacing-sm);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.valueCell {
+  padding: 0 var(--spacing-sm);
+  text-align: center;
+}
+
+.progressCell {
+  width: 100%;
+}

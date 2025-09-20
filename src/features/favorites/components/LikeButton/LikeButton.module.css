@@ -1,0 +1,37 @@
+.likeButton {
+  padding: 0;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.likeButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.likeButton:hover {
+  transform: scale(1.1);
+}
+
+.likeButton:active {
+  transform: scale(1.1);
+}
+
+.outline {
+  color: var(--color-medium);
+}
+
+.fill {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .likeButton svg {
+    width: 32px;
+    height: 32px;
+  }
+}

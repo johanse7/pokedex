@@ -1,0 +1,69 @@
+.pokemonCard {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+.pokemonCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.headerCard {
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  padding-top: var(--spacing-xs);
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemonNumber {
+  align-self: flex-end;
+}
+
+.pokemonName {
+  text-transform: capitalize;
+}
+
+.contendBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contendBody img {
+  object-fit: cover;
+  z-index: var(--z-index-default);
+  width: 80px;
+  height: 80px;
+}
+
+.sectionName {
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  padding-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: var(--spacing-xs);
+}
+
+.likeButton {
+  position: absolute;
+  left: var(--spacing-xs);
+  top: var(--spacing-xs);
+}
+
+@media (min-width: 768px) {
+  .contendBody img {
+    width: 145px;
+    height: 145px;
+  }
+}

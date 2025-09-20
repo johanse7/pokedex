@@ -1,0 +1,38 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-primary);
+}
+
+.iconSearch {
+  composes: icon;
+  left: var(--spacing-md);
+  pointer-events: none;
+}
+
+.iconClose {
+  composes: icon;
+  right: var(--spacing-md);
+}
+.input {
+  padding-left: 36px;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .iconClose svg {
+    width: 24px;
+    height: 24px;
+  }
+}

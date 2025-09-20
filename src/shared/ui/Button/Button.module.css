@@ -1,0 +1,44 @@
+.button {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.secondary {
+  background: var(--color-white);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
+}
+
+.secondary:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.outline {
+  background: transparent;
+  box-shadow: unset;
+}
+
+@media (min-width: 768px) {
+  .secondary {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

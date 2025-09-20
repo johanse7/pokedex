@@ -1,0 +1,168 @@
+:root {
+  /* --------------------
+    Colors
+  -------------------- */
+
+  /* Identity */
+  --color-primary: #dc0a2d;
+
+  /* Pokémon Types */
+  --color-type-bug: #a7b723;
+  --color-type-dark: #75574c;
+  --color-type-dragon: #7037ff;
+  --color-type-electric: #f9cf30;
+  --color-type-fairy: #e69eac;
+  --color-type-fighting: #c12239;
+  --color-type-fire: #f57d31;
+  --color-type-flying: #a891ec;
+  --color-type-ghost: #70559b;
+  --color-type-normal: #aaa67f;
+  --color-type-grass: #74cb48;
+  --color-type-ground: #dec16b;
+  --color-type-ice: #9ad6df;
+  --color-type-poison: #a43e9e;
+  --color-type-psychic: #fb5584;
+  --color-type-rock: #b69e31;
+  --color-type-steel: #b7b9d0;
+  --color-type-water: #6493eb;
+
+  /* Grayscale */
+  --color-dark: #212121;
+  --color-medium: #666666;
+  --color-light: #e0e0e0;
+  --color-background: #efefef;
+  --color-white: #ffffff;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 36px;
+  --spacing-4xl: 40px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* --------------------
+    Typography
+  -------------------- */
+
+  --font-family: "Arial", sans-serif;
+
+  --scale-tablet: 1.3;
+  --scale-desktop: 1.5;
+
+  /* Header */
+  --font-headline-bold-size: 24px;
+  --font-headline-bold-line-height: 32px;
+  --font-headline-bold-weight: 700;
+
+  --font-subtitle1-bold-size: 14px;
+  --font-subtitle1-bold-line-height: 16px;
+  --font-subtitle1-bold-weight: 700;
+
+  --font-subtitle2-bold-size: 12px;
+  --font-subtitle2-bold-line-height: 16px;
+  --font-subtitle2-bold-weight: 700;
+
+  --font-subtitle3-bold-size: 10px;
+  --font-subtitle3-bold-line-height: 17px;
+  --font-subtitle3-bold-weight: 700;
+
+  /* Body */
+  --font-body1-regular-size: 14px;
+  --font-body1-regular-line-height: 16px;
+  --font-body1-regular-weight: 400;
+
+  --font-body2-regular-size: 12px;
+  --font-body2-regular-line-height: 16px;
+  --font-body2-regular-weight: 400;
+
+  --font-body3-regular-size: 10px;
+  --font-body3-regular-line-height: 16px;
+  --font-body3-regular-weight: 400;
+
+  --font-caption-regular-size: 8px;
+  --font-caption-regular-line-height: 12px;
+  --font-caption-regular-weight: 400;
+
+  /* Z-Index */
+  --z-index-background: 0;
+  --z-index-default: 10;
+  --z-index-dropdown: 100;
+  --z-index-modal: 500;
+  --z-index-tooltip: 1000;
+  --z-index-overlay: 2000;
+
+  /* --------------------
+    Shadows
+  -------------------- */
+
+  --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------- Tablet -------------------- */
+@media (min-width: 768px) {
+  :root {
+    --font-headline-bold-size: calc(24px * var(--scale-tablet));
+    --font-headline-bold-line-height: calc(32px * var(--scale-tablet));
+
+    --font-subtitle1-bold-size: calc(14px * var(--scale-tablet));
+    --font-subtitle1-bold-line-height: calc(16px * var(--scale-tablet));
+
+    --font-subtitle2-bold-size: calc(12px * var(--scale-tablet));
+    --font-subtitle2-bold-line-height: calc(16px * var(--scale-tablet));
+
+    --font-subtitle3-bold-size: calc(10px * var(--scale-tablet));
+    --font-subtitle3-bold-line-height: calc(16px * var(--scale-tablet));
+
+    --font-body1-regular-size: calc(14px * var(--scale-tablet));
+    --font-body1-regular-line-height: calc(16px * var(--scale-tablet));
+
+    --font-body2-regular-size: calc(12px * var(--scale-tablet));
+    --font-body2-regular-line-height: calc(16px * var(--scale-tablet));
+
+    --font-body3-regular-size: calc(10px * var(--scale-tablet));
+    --font-body3-regular-line-height: calc(16px * var(--scale-tablet));
+
+    --font-caption-regular-size: calc(8px * var(--scale-tablet));
+    --font-caption-regular-line-height: calc(12px * var(--scale-tablet));
+  }
+}
+
+/* -------------------- Desktop -------------------- */
+@media (min-width: 1025px) {
+  :root {
+    --font-headline-bold-size: calc(24px * var(--scale-desktop));
+    --font-headline-bold-line-height: calc(32px * var(--scale-desktop));
+
+    --font-subtitle1-bold-size: calc(14px * var(--scale-desktop));
+    --font-subtitle1-bold-line-height: calc(16px * var(--scale-desktop));
+
+    --font-subtitle2-bold-size: calc(12px * var(--scale-desktop));
+    --font-subtitle2-bold-line-height: calc(16px * var(--scale-desktop));
+
+    --font-subtitle3-bold-size: calc(10px * var(--scale-desktop));
+    --font-subtitle3-bold-line-height: calc(16px * var(--scale-desktop));
+
+    --font-body1-regular-size: calc(14px * var(--scale-desktop));
+    --font-body1-regular-line-height: calc(16px * var(--scale-desktop));
+
+    --font-body2-regular-size: calc(12px * var(--scale-desktop));
+    --font-body2-regular-line-height: calc(16px * var(--scale-desktop));
+
+    --font-body3-regular-size: calc(10px * var(--scale-desktop));
+    --font-body3-regular-line-height: calc(16px * var(--scale-desktop));
+
+    --font-caption-regular-size: calc(8px * var(--scale-desktop));
+    --font-caption-regular-line-height: calc(12px * var(--scale-desktop));
+  }
+}

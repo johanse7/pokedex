@@ -1,0 +1,58 @@
+.containerDetail {
+  min-height: 100svh;
+  background-image: url("/images/pokeball.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top var(--spacing-xs) right var(--spacing-xs);
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xs);
+}
+
+.detailInfo {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  position: relative;
+  margin-top: 120px;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.sliderPokemon img {
+  width: 200px;
+  height: 200px;
+}
+
+.sliderPokemonContent {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .containerDetail {
+    background-position: top center;
+  }
+
+  .sliderPokemon img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .detailInfo {
+    margin-top: 200px;
+    padding-top: 100px;
+  }
+
+  .sliderPokemonContent {
+    top: -200px;
+  }
+}
