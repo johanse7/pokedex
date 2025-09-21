@@ -42,6 +42,10 @@
   --spacing-2xl: 32px;
   --spacing-3xl: 36px;
   --spacing-4xl: 40px;
+  --spacing-5lx: 48px;
+  --spacing-6lx: 56px;
+  --spacing-7lx: 60px;
+  --spacing-8lx: 64px;
 
   /* Radius */
   --radius-sm: 4px;
