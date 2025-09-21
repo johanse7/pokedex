@@ -25,7 +25,7 @@ export const Image = ({
         <img
           src={placeholder}
           alt={`${alt ?? "placeholder"}-loading`}
-          className={styles.placeholder}
+          className={`${styles.placeholder} fade-in`}
           {...rest}
         />
       )}

@@ -6,7 +6,7 @@ import {
   usePokemonDetail,
 } from "@/features/detail";
 
-import { getTypeClass, type PokemonTypeKey } from "@/helpers";
+import { type PokemonTypeKey } from "@/helpers";
 import { Slider } from "@/shared/components";
 import layoutStyles from "@/shared/layouts/main-layout/MainLayout.module.css";
 import { Loader } from "@/shared/ui";
@@ -35,13 +35,12 @@ export const DetailPage = () => {
   } = pokemonDetail;
 
   const firstType: PokemonTypeKey = (types?.[0] as PokemonTypeKey) ?? "steel";
-  const backgroundClass = getTypeClass(firstType);
 
   return (
     <div
-      className={`${layoutStyles.layout} ${styles.containerDetail} ${backgroundClass}`}
+      className={`${layoutStyles.screenContainer} ${styles.containerDetail} `}
     >
-      <div className={`${layoutStyles.centeredContainer}`}>
+      <div className={`${layoutStyles.screenContainer} content-area`}>
         <HeaderDetails pokemonId={pokemonId} title={name} />
         <div className={styles.wrapperDetail}>
           <section className={styles.detailInfo}>

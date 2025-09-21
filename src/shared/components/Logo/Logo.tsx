@@ -7,7 +7,9 @@ export const Logo = () => {
   return (
     <div className={styles.contentLogo}>
       <PokeBallIcon className={styles.logo} />
-      <Typography variant="headlineBold">Pokédex</Typography>
+      <Typography tag="span" variant="headlineBold">
+        Pokédex
+      </Typography>
     </div>
   );
 };

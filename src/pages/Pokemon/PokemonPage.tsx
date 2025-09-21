@@ -5,8 +5,10 @@ import style from "./PokemonPage.module.css";
 
 export const PokemonPage = () => {
   return (
-    <div className={`${layoutStyles.layout} ${style.containerPokemonPage}`}>
-      <div className={layoutStyles.centeredContainer}>
+    <div
+      className={`${layoutStyles.screenContainer}`}
+    >
+      <div className={`${layoutStyles.screenContainer} content-area`}>
         <FilterContainer />
         <section className={style.listContainer}>
           <PokemonListContainer />

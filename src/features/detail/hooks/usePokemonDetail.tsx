@@ -1,31 +1,31 @@
 import { useQuery } from "@apollo/client/react";
+import { useEffect, useMemo } from "react";
 import { GET_POKEMON_DETAIL_QUERY } from "../graphql/queries";
+import { pokemonTypesVar } from "../store/pokemonDetailState";
 import type {
-  PokemonDetail,
-  PokemonStats,
-  PokemonStatResponse,
-  PokemonMoveResponse,
-  PokemonTypeResponse,
   GetPokemonDetailResponse,
+  PokemonDetail,
+  PokemonMoveResponse,
+  PokemonStatResponse,
+  PokemonStats,
+  PokemonTypeResponse,
 } from "../types/pokemonDetail";
 
-type PokemonDetailVars = {
+type VarsType = {
   id: string;
 };
 
 export const usePokemonDetail = (id: string) => {
-  const { data, ...rest } = useQuery<
-    GetPokemonDetailResponse,
-    PokemonDetailVars
-  >(GET_POKEMON_DETAIL_QUERY, {
-    variables: { id },
-  });
+  const { data, ...rest } = useQuery<GetPokemonDetailResponse, VarsType>(
+    GET_POKEMON_DETAIL_QUERY,
+    { variables: { id } }
+  );
 
-  let pokemonDetail: PokemonDetail | null = null;
+  const pokemonDetail: PokemonDetail | null = useMemo(() => {
+    if (!data?.pokemonDetail) return null;
 
-  if (data?.pokemonDetail) {
     const {
-      id = 0,
+      id: pokeId = 0,
       name = "",
       height = 0,
       weight = 0,
@@ -58,8 +58,8 @@ export const usePokemonDetail = (id: string) => {
         name: category?.name ?? "",
       }));
 
-    pokemonDetail = {
-      id,
+    return {
+      id: pokeId,
       name,
       height,
       weight,
@@ -69,10 +69,12 @@ export const usePokemonDetail = (id: string) => {
       moves: movesResult,
       stats: statsResult,
     };
-  }
+  }, [data]);
 
-  return {
-    pokemonDetail,
-    ...rest,
-  };
+  useEffect(() => {
+    pokemonTypesVar(pokemonDetail?.types);
+    return () => pokemonTypesVar(null);
+  }, [pokemonDetail]);
+
+  return { pokemonDetail, ...rest };
 };

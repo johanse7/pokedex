@@ -1,1 +1,2 @@
-export * from './utils/pokemonTypeUtils';
+export * from "./constants";
+export * from "./utils/pokemonTypeUtils";

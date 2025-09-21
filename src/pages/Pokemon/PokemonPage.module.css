@@ -1,7 +1,3 @@
-.containerPokemonPage {
-  background: var(--color-primary);
-}
-
 .listContainer {
   padding: var(--spacing-xs);
   display: flex;

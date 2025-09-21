@@ -1,0 +1,74 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-index-overlay);
+  color: var(--color-white);
+  transition: background-color 200ms ease;
+}
+
+.container {
+  padding: 0 1rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: none;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.menuButton {
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.mobileMenu {
+  overflow: hidden;
+  height: 0;
+  transition: height 280ms ease, padding 280ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: 0 1rem;
+}
+
+.mobileMenuOpen {
+  height: 100svh;
+}
+
+.overlay {
+  display: none;
+}
+
+.overlayVisible {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: var(--z-index-modal);
+}
+
+@media (min-width: 768px) {
+  .links {
+    display: flex;
+  }
+  .menuButton {
+    display: none;
+  }
+  .mobileMenu {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+}

@@ -60,11 +60,23 @@ table {
    globals
   -------------------- */
 
-
 .capitalize {
   text-transform: capitalize;
 }
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.content-area {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
 }

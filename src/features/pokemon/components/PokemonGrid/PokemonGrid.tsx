@@ -8,7 +8,7 @@ type PokemonList = {
 
 export const PokemonGrid = ({ pokemonList = [] }: PokemonList) => {
   return (
-    <div className={styles.wrapperList}>
+    <div className={`${styles.wrapperList} fade-in`}>
       {pokemonList.map((pokemon) => {
         return <PokemonCard key={pokemon.id} pokemon={pokemon} />;
       })}

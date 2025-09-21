@@ -22,7 +22,7 @@ export const HeaderDetails = (props: HeaderDetailsProps) => {
         <Button variant="outline" onClick={handleClickBack}>
           <ArrowBackIcon width={32} height={32} />
         </Button>
-        <Typography tag="h1" variant="headlineBold" className="capitalize">
+        <Typography tag="h1" variant="subtitle1Bold" className="capitalize">
           {title}
         </Typography>
       </div>

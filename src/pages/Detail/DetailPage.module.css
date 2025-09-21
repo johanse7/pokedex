@@ -23,6 +23,8 @@
   padding-left: var(--spacing-lg);
   padding-right: var(--spacing-lg);
   gap: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 

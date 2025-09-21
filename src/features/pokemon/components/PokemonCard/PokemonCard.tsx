@@ -32,7 +32,7 @@ export const PokemonCard = (props: PokemonCardProps) => {
           <div className={style.sectionName}>
             <Typography
               variant="body3Regular"
-              className={style.pokemonName}
+              className={`${style.pokemonName} text-ellipsis`}
               title={name}
             >
               {name}
