@@ -1,12 +1,9 @@
-import ArrowBackIcon from "@/assets/icons/arrow_back.svg?react";
 import { selectFavorites } from "@/features/favorites";
 import { PokemonGrid } from "@/features/pokemon";
 import stylePokemonList from "@/features/pokemon/components/PokemonListContainer/PokemonListContainer.module.css";
 import { useAppSelector } from "@/hooks";
-import { EmptyState } from "@/shared/components";
+import { BackButton, EmptyState } from "@/shared/components";
 import layoutStyles from "@/shared/layouts/main-layout/MainLayout.module.css";
-import { Typography } from "@/shared/ui";
-import { Link } from "react-router";
 import styles from "../Pokemon/PokemonPage.module.css";
 import stylesFavoritesPage from "./FavoritePage.module.css";
 
@@ -18,12 +15,7 @@ export const FavoritesPage = () => {
       className={`${layoutStyles.screenContainer} ${styles.containerPokemonPage}`}
     >
       <div className={`${layoutStyles.screenContainer} content-area`}>
-        <header className={stylesFavoritesPage.header}>
-          <Link to="/">
-            <ArrowBackIcon width={36} height={36} />
-          </Link>
-          <Typography variant="subtitle1Bold">Favorite Pokemos</Typography>
-        </header>
+        <BackButton title="Favorite pokemonms" path="/" className={stylesFavoritesPage.headerBackButton}/>
         {!favoritePokemons.length ? (
           <EmptyState className={stylesFavoritesPage.emptyState} />
         ) : (

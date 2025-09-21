@@ -62,9 +62,9 @@ export const Navbar = ({ className = "" }: NavbarProps) => {
             onClick={() => setIsOpen((s) => !s)}
           >
             {isOpen ? (
-              <CloseIcon width={24} height={24} />
+              <CloseIcon width={32} height={32} />
             ) : (
-              <BurgerMenuIcon width={24} height={24} />
+              <BurgerMenuIcon width={32} height={32} />
             )}
           </Button>
         </div>

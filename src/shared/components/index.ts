@@ -1,3 +1,4 @@
+export * from "./BackButton/BackButton";
 export * from "./EmptyState/EmptyState";
 export * from "./Image/Image";
 export * from "./Logo/Logo";

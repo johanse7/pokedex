@@ -5,7 +5,7 @@
   right: 0;
   z-index: var(--z-index-overlay);
   color: var(--color-white);
-  transition: background-color 200ms ease;
+  transition: background-color 0.3s ease;
 }
 
 .container {
@@ -43,7 +43,7 @@
 }
 
 .mobileMenuOpen {
-  height: 100svh;
+  height: 100dvh;
 }
 
 .overlay {

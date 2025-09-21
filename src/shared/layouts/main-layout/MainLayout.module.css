@@ -1,8 +1,8 @@
 .screenContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
-  transition: background-color 200ms;
+  min-height: 100dvh;
+  transition: background-color 0.3s ease
 }
 
 .defaultBackground {

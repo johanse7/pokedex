@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+  color: var(--color-white);
+}
+.container button {
+  color: var(--color-white);
+}
