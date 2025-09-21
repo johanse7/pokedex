@@ -73,7 +73,9 @@ export const usePokemonDetail = (id: string) => {
 
   useEffect(() => {
     pokemonTypesVar(pokemonDetail?.types);
-    return () => pokemonTypesVar(null);
+    return () => {
+      pokemonTypesVar(null);
+    };
   }, [pokemonDetail]);
 
   return { pokemonDetail, ...rest };
