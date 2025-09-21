@@ -15,7 +15,11 @@ export const BackButton = (props: BackButtonProps) => {
   const navigate = useNavigate();
 
   const handleClickBack = () => {
-    navigate(path ?? -1);
+    if (path) {
+      navigate(path);
+    } else {
+      navigate(-1);
+    }
   };
 
   return (
