@@ -3,7 +3,20 @@
   gap: var(--spacing-sm);
   align-items: center;
   color: var(--color-white);
+  z-index: var(--z-index-overlay);
 }
 .container button {
   color: var(--color-white);
+}
+
+.container button svg {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: 768px) {
+  .container button svg {
+    width: 40px;
+    height: 40px;
+  }
 }

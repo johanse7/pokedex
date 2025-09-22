@@ -88,7 +88,10 @@ export const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div className={`${styles.paginationWrapper} ${className}`}>
+    <div
+      className={`${styles.paginationWrapper} ${className}`}
+      aria-label="pagination"
+    >
       <button onClick={prevPage} disabled={currentPage === 1}>
         <ChevronLeftIcon width={32} height={32} />
       </button>

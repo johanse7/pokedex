@@ -1,4 +1,4 @@
-// Navbar.tsx
+
 import CloseIcon from "@/assets/icons/close.svg?react";
 import BurgerMenuIcon from "@/assets/icons/hamburger-menu.svg?react";
 import { NAV_LINKS } from "@/helpers";

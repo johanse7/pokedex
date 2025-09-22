@@ -9,12 +9,14 @@ type ProgressBarProps = {
 export const ProgressBar = ({ value, type }: ProgressBarProps) => {
   return (
     <div
+      role="progressbar"
       className={styles.progressContainer}
       style={{
         backgroundColor: `color-mix(in srgb, var(--color-type-${type}) 20%, transparent)`,
       }}
     >
       <div
+        role="progressbar-percent"
         className={styles.progressFill}
         style={{
           width: `${value}%`,

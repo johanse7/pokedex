@@ -11,11 +11,40 @@ This project is a React application built with Vite, showcasing a modern fronten
 
 ## 🚀 Features
 
-- ⭐ **Favorites system** persisted with [Zustand](https://github.com/pmndrs/zustand)
+- ⭐ **Favorites system** persisted with [Redux Toolkit](https://redux-toolkit.js.org/)
 - 🎨 **Responsive UI** powered by CSS Modules
 - 📂 **Data fetching & caching** with [Apollo Client](https://www.apollographql.com/docs/react/)
 - 🧪 **Unit & integration tests** with Vitest + React Testing Library
 - 🗂️ **Feature-based folder structure** for scalability
+
+├── dist/ # Production build
+├── e2e/ # End-to-end tests (Playwright)
+├── node_modules/ # Dependencies
+├── playwright-report/ # Playwright test reports
+├── public/ # Static public assets
+├── src/ # Source code
+│ ├── app/ # Global app configuration
+│ ├── assets/ # Static resources
+│ ├── features/ # Domain-driven features
+│ │ ├── detail/ # Pokémon detail view
+│ │ ├── favorites/ # Favorites management
+│ │ ├── filter/ # Filtering logic
+│ │ └── pokemon/ # Pokémon listing
+│ ├── helpers/ # Utility functions
+│ ├── hooks/ # Reusable hooks
+│ ├── pages/ # Main pages
+│ ├── shared/ # Shared components and styles
+│ ├── types/ # TypeScript types
+│ ├── App.tsx # Root component
+│ └── main.tsx # Application entry point
+├── test-results/ # Test results output
+├── .env # Environment variables
+├── eslint.config.js # ESLint configuration
+├── index.html # Main HTML file
+├── package.json # Dependencies and scripts
+├── playwright.config.ts # Playwright configuration
+├── tsconfig.json # TypeScript configuration
+├── vite.config.ts # Vite configuration
 
 ## Project Overview
 
@@ -49,29 +78,29 @@ You need to have Node.js and npm (or yarn) installed.
 ### Installation
 
 1. Clone the repository:
-    ```bash
-    git clone <your-repo-url>
-    ```
+   ```bash
+   git clone <your-repo-url>
+   ```
 2. Navigate to the project directory:
-    ```bash
-    cd tekton-challenge
-    ```
+   ```bash
+   cd tekton-challenge
+   ```
 3. Install the dependencies:
-    ```bash
-    pnpm install
-    ```
+   ```bash
+   pnpm install
+   ```
 4. Run dev:
-    ```bash
-    pnpm run dev
-    ```
+   ```bash
+   pnpm run dev
+   ```
 5. Run unit tests:
-    ```bash
-    pnpm run test
-    ```
+   ```bash
+   pnpm run test
+   ```
 6. Run e2e tests:
-    ```bash
-    pnpm run test:e2e
-    ```
+   ```bash
+   pnpm run test:e2e
+   ```
 
 ### Running the Application
 
