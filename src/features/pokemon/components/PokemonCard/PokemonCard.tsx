@@ -16,7 +16,7 @@ export const PokemonCard = (props: PokemonCardProps) => {
 
   return (
     <Link to={`/pokemon/${id}`}>
-      <article className={style.pokemonCard}>
+      <article className={style.pokemonCard} role="listitem">
         <LikeButton pokemon={pokemon} className={style.likeButton} />
         <div className={style.headerCard}>
           <Typography

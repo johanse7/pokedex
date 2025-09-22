@@ -13,7 +13,10 @@ export const EmptyState = ({
   className = "",
 }: EmptyStateProps) => {
   return (
-    <div className={`${styles.container} ${className}`}>
+    <div
+      className={`${styles.container} ${className}`}
+      aria-label="Empty state"
+    >
       <Typography variant="subtitle1Bold" tag="h2">
         {title}
       </Typography>

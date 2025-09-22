@@ -28,6 +28,7 @@ export const SortCard = ({ onClose, className }: SortCardProps) => {
     <div
       className={`${styles.sortContainer} ${className ?? ""}`}
       ref={refElement}
+      aria-label="sort-card"
     >
       <header className={styles.header}>
         <Typography variant="subtitle2Bold">Sort by:</Typography>
@@ -41,6 +42,7 @@ export const SortCard = ({ onClose, className }: SortCardProps) => {
             name="sort"
             checked={value === orderByParam}
             onChange={handleChange}
+            aria-label="sort-field"
           />
         ))}
       </div>

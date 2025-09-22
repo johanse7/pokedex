@@ -35,7 +35,11 @@ export const Slider = ({
   }, [currentIndex, autoPlay, interval, nextSlide]);
 
   return (
-    <div className={`${styles.sliderContainer} ${className ?? ""}`}>
+    <div
+      className={`${styles.sliderContainer} ${className ?? ""}`}
+      aria-label="Slider"
+      role="region"
+    >
       <div
         className={styles.slideWrapper}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}

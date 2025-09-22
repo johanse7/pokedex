@@ -18,7 +18,7 @@ export const AboutPokemon = (props: AboutPokemonProps) => {
   const { weight, height, description, type, moves = [] } = props;
 
   return (
-    <section className={styles.aboutContainer}>
+    <section className={styles.aboutContainer} aria-label="about-pokemon">
       <Typography
         tag="h3"
         variant="subtitle1Bold"

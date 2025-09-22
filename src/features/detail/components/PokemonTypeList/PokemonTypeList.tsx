@@ -8,7 +8,7 @@ type PokemonTypeListProps = {
 
 export const PokemonTypeList = ({ types }: PokemonTypeListProps) => {
   return (
-    <div className={styles.typeList}>
+    <div className={styles.typeList} role="list" aria-label="Pokemon types">
       {types.map((type) => (
         <TypePill key={type} type={type} />
       ))}
