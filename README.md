@@ -57,11 +57,9 @@ This project uses a modern web development stack. The most relevant libraries fo
 
 - **Vite:** A fast build tool that provides a rapid development environment.
 - **React:** The core JavaScript library for building the user interface.
-- **Zustand:** A small, fast, and scalable state-management solution. It's used to manage the application's global state, such as favorites.
+- **Redux Toolkit:** standardized, efficient, and scalable state-management solution. It's used to manage the application's global state, such as favorites..
 - **Apollo Client:** A powerful library for fetching, caching, and managing GraphQL data.
-- **React Virtual (`@tanstack/react-virtual`):** A headless utility for virtualizing large lists and tabular data. This library is key to the performance improvement you mentioned for the infinite scroll feature.
 - **CSS Modules:** Modular CSS to scope styles locally and avoid collisions.
-- **Axios:** A promise-based HTTP client for making API requests.
 - **Playwright:** An end-to-end testing framework for web applications. It allows you to automate browsers and write reliable UI tests to ensure your app works correctly.
 
 ## Getting Started
