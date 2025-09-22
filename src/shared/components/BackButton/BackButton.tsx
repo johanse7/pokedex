@@ -31,7 +31,7 @@ export const BackButton = (props: BackButtonProps) => {
   return (
     <div className={`${styles.container} ${className}`}>
       <Button variant="outline" onClick={handleClickBack}>
-        <ArrowBackIcon  />
+        <ArrowBackIcon />
       </Button>
       <Typography tag="h1" variant="headlineBold" className="capitalize">
         {title}
