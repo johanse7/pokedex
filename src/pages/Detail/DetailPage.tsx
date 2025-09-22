@@ -7,7 +7,7 @@ import {
 } from "@/features/detail";
 
 import { type PokemonTypeKey } from "@/helpers";
-import { Slider } from "@/shared/components";
+import { ErrorHandler, Slider } from "@/shared/components";
 import layoutStyles from "@/shared/layouts/main-layout/MainLayout.module.css";
 import { Loader } from "@/shared/ui";
 import { Navigate, useParams } from "react-router";
@@ -16,9 +16,11 @@ import styles from "./DetailPage.module.css";
 export const DetailPage = () => {
   const { id } = useParams<{ id: string }>();
 
-  const { pokemonDetail, loading } = usePokemonDetail(id!);
+  const { pokemonDetail, loading, error } = usePokemonDetail(id!);
 
   if (loading) return <Loader centered />;
+
+  if (error) return <ErrorHandler error={error} />;
 
   if (!pokemonDetail) return <Navigate to="/" replace />;
 

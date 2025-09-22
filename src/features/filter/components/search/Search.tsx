@@ -26,6 +26,7 @@ export const Search = () => {
 
   const handleClear = () => {
     searchTerm.delete("search");
+    searchTerm.set("page", "1");
     setSearchTerm(searchTerm);
     if (inputRef.current) {
       inputRef.current.value = "";

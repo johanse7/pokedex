@@ -17,9 +17,15 @@ export const BackButton = (props: BackButtonProps) => {
   const handleClickBack = () => {
     if (path) {
       navigate(path);
-    } else {
-      navigate(-1);
+      return;
     }
+
+    if (window.history.state && window.history.state.idx > 0) {
+      navigate(-1);
+      return;
+    }
+
+    navigate("/");
   };
 
   return (

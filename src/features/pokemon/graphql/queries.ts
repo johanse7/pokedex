@@ -47,6 +47,11 @@ export const getPokemonListVariables = ({
           _or: [
             { name: { _ilike: `%${search}%` } },
             { id: { _eq: parseInt(search as string, 10) || 0 } },
+            {
+              pokemon_v2_pokemontypes: {
+                pokemon_v2_type: { name: { _ilike: `%${search}%` } },
+              },
+            },
           ],
         }
       : undefined,

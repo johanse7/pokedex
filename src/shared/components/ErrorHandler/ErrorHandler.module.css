@@ -1,0 +1,9 @@
+.handlerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  color: var(--color-white);
+  min-height: calc(100dvh - var(--spacing-8xl));
+}

@@ -1,5 +1,5 @@
 import type { FilterType } from "@/features/filter/types/filter";
-import { EmptyState, Pagination } from "@/shared/components";
+import { EmptyState, ErrorHandler, Pagination } from "@/shared/components";
 import { useSearchParams } from "react-router";
 import { usePokemonList } from "../../hooks/usePokemonList";
 import { PokemonGrid } from "../PokemonGrid/PokemonGrid";
@@ -10,11 +10,17 @@ export const PokemonListContainer = () => {
   const [searchParams] = useSearchParams();
 
   const params = Object.fromEntries(searchParams) as FilterType;
-  const { pokemonList = [], loading, totalPages } = usePokemonList(params);
+  const {
+    pokemonList = [],
+    loading,
+    totalPages,
+    error,
+  } = usePokemonList(params);
 
   if (loading) {
     return <PokemonListSkeleton />;
   }
+  if (error) return <ErrorHandler error={error} />;
 
   if (!pokemonList.length) {
     return <EmptyState className={style.emptyState} />;

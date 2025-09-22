@@ -1,7 +1,7 @@
 .screenContainer {
   display: flex;
   flex-direction: column;
-  min-height: calc(100dvh - var(--spacing-8lx));
+  min-height: calc(100dvh - var(--spacing-8xl));
   transition: background-color 0.3s ease;
 }
 
@@ -10,5 +10,5 @@
 }
 
 .mainContent {
-  padding-top: var(--spacing-8lx);
+  padding-top: var(--spacing-8xl);
 }

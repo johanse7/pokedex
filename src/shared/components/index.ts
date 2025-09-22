@@ -1,5 +1,6 @@
 export * from "./BackButton/BackButton";
 export * from "./EmptyState/EmptyState";
+export * from "./ErrorHandler/ErrorHandler";
 export * from "./Image/Image";
 export * from "./Logo/Logo";
 export * from "./Navbar/Navbar";
